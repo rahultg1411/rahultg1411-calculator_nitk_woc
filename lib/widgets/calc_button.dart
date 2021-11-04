@@ -21,12 +21,14 @@ class CalculatorButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(7.0),
+      margin: EdgeInsets.all(5.0),
       child: SizedBox(
         width: 70,
-        height: 60,
+        height: 70,
         child: TextButton(
           style: TextButton.styleFrom(
+            textStyle: TextStyle(fontWeight: FontWeight.bold),
+            shape: CircleBorder(),
             primary: Color(textColor),
             backgroundColor: Color(fillColor),
           ),

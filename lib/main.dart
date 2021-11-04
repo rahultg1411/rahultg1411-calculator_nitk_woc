@@ -84,12 +84,13 @@ class _CalculatorAppState extends State<CalculatorApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Calculator'),
+          backgroundColor: Color(0xFF00695C),
         ),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blueGrey[900],
         body: Container(
           margin: EdgeInsets.all(10.0),
           child: Column(
@@ -130,28 +131,28 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 children: [
                   CalculatorButton(
                     text: 'AC',
-                    fillColor: 0xBE2625F5,
+                    fillColor: 0xFF1A237E,
                     textColor: 0xFFBFEB91,
                     textSize: 25,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: 'C',
-                    fillColor: 0xBE2625F5,
+                    fillColor: 0xFF1A237E,
                     textColor: 0xFFBFEB91,
                     textSize: 25,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '<',
-                    fillColor: 0x49E20E160,
+                    fillColor: 0xFF1B5E20,
                     textColor: 0xFFBFEB91,
                     textSize: 25,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '/',
-                    fillColor: 0xEE1289F5,
+                    fillColor: 0xFF01579B,
                     textColor: 0xFFBFEB91,
                     textSize: 25,
                     callback: buttonOnClick,
@@ -163,28 +164,28 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 children: [
                   CalculatorButton(
                     text: '9',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '8',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '7',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: 'X',
-                    fillColor: 0xEE1289F5,
+                    fillColor: 0xFF01579B,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
@@ -196,28 +197,28 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 children: [
                   CalculatorButton(
                     text: '6',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '5',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '4',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '-',
-                    fillColor: 0xEE1289F5,
+                    fillColor: 0xFF01579B,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
@@ -229,28 +230,28 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 children: [
                   CalculatorButton(
                     text: '3',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '2',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '1',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '+',
-                    fillColor: 0xEE1289F5,
+                    fillColor: 0xFF01579B,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
@@ -262,28 +263,28 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 children: [
                   CalculatorButton(
                     text: '+/-',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF01579B,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '0',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '00',
-                    fillColor: 0xFF42A5F5,
+                    fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: '=',
-                    fillColor: 0x49E20E160,
+                    fillColor: 0xFF1B5E20,
                     textColor: 0xFFBFEB91,
                     textSize: 20,
                     callback: buttonOnClick,
