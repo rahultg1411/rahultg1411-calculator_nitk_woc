@@ -1,6 +1,6 @@
 # calculator_nitk_woc
 
-A new Flutter project.
+A Calculator app.
 
 ## Getting Started
 
