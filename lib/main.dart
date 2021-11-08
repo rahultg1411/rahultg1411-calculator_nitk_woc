@@ -15,8 +15,8 @@ class CalculatorApp extends StatefulWidget {
 }
 
 class _CalculatorAppState extends State<CalculatorApp> {
-  late int firstNum;
-  late int secondNum;
+  late var firstNum;
+  late var secondNum;
   String history = '';
   String textToDisplay = '';
   late String res;
@@ -46,11 +46,18 @@ class _CalculatorAppState extends State<CalculatorApp> {
         btnVal == '-' ||
         btnVal == 'X' ||
         btnVal == '/') {
-      firstNum = int.parse(textToDisplay);
+      if (textToDisplay.contains('.'))
+        firstNum = double.parse(textToDisplay);
+      else
+        firstNum = int.parse(textToDisplay);
+
       res = '';
       operation = btnVal;
     } else if (btnVal == '=') {
-      secondNum = int.parse(textToDisplay);
+      if (textToDisplay.contains('.'))
+        secondNum = double.parse(textToDisplay);
+      else
+        secondNum = int.parse(textToDisplay);
       if (operation == '+') {
         res = (firstNum + secondNum).toString();
         history =
@@ -72,11 +79,19 @@ class _CalculatorAppState extends State<CalculatorApp> {
             firstNum.toString() + operation.toString() + secondNum.toString();
       }
     } else {
-      res = int.parse(textToDisplay + btnVal).toString();
+      res = textToDisplay + btnVal;
     }
 
     setState(() {
-      textToDisplay = res;
+      if (res != '') {
+        String s = res;
+        if (res.contains('.') && res.substring(res.length - 1) != ".") {
+          s = double.parse(res).toStringAsFixed(1);
+        } else if (!res.contains('.')) s = int.parse(res).toString();
+
+        textToDisplay = s;
+      } else
+        textToDisplay = res;
     });
   }
 
@@ -88,9 +103,9 @@ class _CalculatorAppState extends State<CalculatorApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Calculator'),
-          backgroundColor: Color(0xFF00695C),
+          backgroundColor: Color.fromRGBO(11, 117, 143, 1.0),
         ),
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Color.fromRGBO(10, 35, 43, 0.8),
         body: Container(
           margin: EdgeInsets.all(10.0),
           child: Column(
@@ -131,14 +146,14 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 children: [
                   CalculatorButton(
                     text: 'AC',
-                    fillColor: 0xFF1A237E,
+                    fillColor: 0xFFC62828,
                     textColor: 0xFFBFEB91,
                     textSize: 25,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
                     text: 'C',
-                    fillColor: 0xFF1A237E,
+                    fillColor: 0xFFC62800,
                     textColor: 0xFFBFEB91,
                     textSize: 25,
                     callback: buttonOnClick,
@@ -276,10 +291,10 @@ class _CalculatorAppState extends State<CalculatorApp> {
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
-                    text: '00',
+                    text: '.',
                     fillColor: 0xFF00838F,
                     textColor: 0xFFBFEB91,
-                    textSize: 20,
+                    textSize: 30,
                     callback: buttonOnClick,
                   ),
                   CalculatorButton(
